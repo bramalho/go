@@ -22,4 +22,8 @@ func main() {
 	fmt.Println("New deck from file:")
 	tenCards := newDeckFromFile("files/tenCards")
 	tenCards.print()
+
+	fmt.Println("Shuffle")
+	cards.shuffle()
+	cards.print()
 }
