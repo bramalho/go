@@ -5,11 +5,14 @@ import "fmt"
 func main()  {
 	cards := newDeck()
 
-	hand, remaingDeck := deal(cards, 5)
+	fmt.Println("Deck:")
+	cards.print()
+
+	hand, remainingDeck := deal(cards, 5)
 
 	fmt.Println("Hand:")
 	hand.print()
 
 	fmt.Println("Remaining Deck:")
-	remaingDeck.print()
+	remainingDeck.print()
 }
