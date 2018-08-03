@@ -8,7 +8,7 @@ func main() {
 	fmt.Println("Deck:")
 	cards.print()
 
-	hand, remainingDeck := deal(cards, 5)
+	hand, remainingDeck := deal(cards, 10)
 
 	fmt.Println("Hand:")
 	hand.print()
@@ -17,5 +17,9 @@ func main() {
 	remainingDeck.print()
 
 	fmt.Println("Deck to string: " + cards.toString())
-	cards.saveToFile("cards")
+	cards.saveToFile("files/cards")
+
+	fmt.Println("New deck from file:")
+	tenCards := newDeckFromFile("files/tenCards")
+	tenCards.print()
 }
