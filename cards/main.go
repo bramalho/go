@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	cards := newDeck()
 
 	fmt.Println("Deck:")
@@ -15,4 +15,6 @@ func main()  {
 
 	fmt.Println("Remaining Deck:")
 	remainingDeck.print()
+
+	fmt.Println("Deck to string: " + cards.toString())
 }
