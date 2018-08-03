@@ -17,4 +17,5 @@ func main() {
 	remainingDeck.print()
 
 	fmt.Println("Deck to string: " + cards.toString())
+	cards.saveToFile("cards")
 }
