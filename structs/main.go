@@ -18,8 +18,8 @@ func (p person) print() {
 	fmt.Printf("%+v\n", p)
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }
 
 func main() {
@@ -44,6 +44,7 @@ func main() {
 		},
 	}
 
-	bruno.updateName("B")
+	brunoPointer := &bruno
+	brunoPointer.updateName("B")
 	bruno.print()
 }
