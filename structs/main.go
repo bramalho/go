@@ -44,7 +44,9 @@ func main() {
 		},
 	}
 
-	brunoPointer := &bruno
-	brunoPointer.updateName("B")
+	//brunoPointer := &bruno
+	//brunoPointer.updateName("B")
+
+	bruno.updateName("B")
 	bruno.print()
 }
