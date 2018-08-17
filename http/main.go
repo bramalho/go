@@ -21,5 +21,17 @@ func main() {
 	//resp.Body.Read(bs)
 	//fmt.Println(string(bs))
 
-	io.Copy(os.Stdout, resp.Body)
+	//io.Copy(os.Stdout, resp.Body)
+
+	lw := logWriter{}
+	io.Copy(lw, resp.Body)
+
+}
+
+type logWriter struct {}
+
+func (logWriter) Write(bs []byte) (int, error) {
+	fmt.Println(string(bs))
+	fmt.Println("Google has length of ", len(bs))
+	return len(bs), nil
 }
