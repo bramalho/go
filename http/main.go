@@ -15,4 +15,9 @@ func main() {
 	}
 
 	fmt.Println("Status code: ", resp.StatusCode)
+
+	bs := make([]byte, 99999)
+	resp.Body.Read(bs)
+
+	fmt.Println(string(bs))
 }
